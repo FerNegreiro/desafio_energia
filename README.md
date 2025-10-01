@@ -21,8 +21,8 @@ A solução é estruturada em módulos, permitindo a fácil extensão para novas
 
 1.  **Clone o repositório:**
     ```bash
-    git clone [SEU-LINK-DO-GITHUB-AQUI]
-    cd [NOME-DO-SEU-REPOSITORIO]
+    git clone https://github.com/FerNegreiro/desafio_energia.git
+    cd desafio_energia
     ```
 
 2.  **Crie e ative um ambiente virtual:**
