@@ -40,7 +40,7 @@ def run():
     newave_loader = NewaveLoader(NEWAVE_FILE_PATH)
     cmo_series = newave_loader.load_and_process()
 
-    
+  
     print("Preparando e dividindo os dados para treino e teste...")
     full_df = pd.concat([price_series, cmo_series], axis=1).dropna()
     full_df.columns = ['price', 'cmo']
@@ -65,7 +65,7 @@ def run():
     enriched_preds = enriched_predictor.predict(steps=len(y_test_price), future_exog_data=exog_test)
     enriched_metrics = evaluate_model(y_test_price, enriched_preds, 'Enriched (SARIMAX + CMO)')
 
-    
+   
     results_df = pd.DataFrame([baseline_metrics, enriched_metrics])
     
     print("\n" + "="*50)
