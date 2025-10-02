@@ -44,11 +44,14 @@ A solução é estruturada em módulos, permitindo a fácil extensão para novas
     python main.py
     ```
 
-## 🏗️ Estrutura do Projeto
+### 🏗️ Estrutura do Projeto
 
 -   `main.py`: Orquestrador principal que executa todo o fluxo de modelagem.
+-   `analise_visual.ipynb`: Jupyter Notebook com a análise exploratória e visualização gráfica dos dados.
 -   `gerar_dados.py`: Script para gerar dados sintéticos para fins de teste.
 -   `loaders/`: Módulos para carregamento e pré-processamento de dados.
 -   `predictor/`: Módulos com as classes dos modelos preditivos.
--   `data/`: Diretório para armazenamento dos dados.
--   `requirements.txt`: Lista de dependências do projeto.
+-   `data/`: Diretório para armazenamento dos dados de entrada.
+-   `tests/`: Testes unitários para validação do código.
+-   `requirements.txt`: Lista de dependências do projeto para fácil instalação.
+-   `.gitignore`: Arquivo que especifica quais arquivos e pastas devem ser ignorados pelo Git.
