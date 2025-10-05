@@ -81,6 +81,22 @@ def run():
     else:
         print("\nConclusão: O modelo enriquecido não superou o baseline neste teste.")
 
+    
+    print("\n" + "-"*50)
+    print("Análise de Ganhos com o Uso do Newave (CMO)")
+
+    
+    rmse_baseline = results_df.loc[0, 'RMSE']
+    rmse_enriched = results_df.loc[1, 'RMSE']
+
+    if rmse_baseline > 0:
+        melhoria_percentual = ((rmse_baseline - rmse_enriched) / rmse_baseline) * 100
+        print(f"Melhoria no RMSE: {melhoria_percentual:.2f}%")
+    else:
+        print("Não foi possível calcular a melhoria percentual.")
+
+    print("-"*50)
+
 
 if __name__ == '__main__':
     run()
